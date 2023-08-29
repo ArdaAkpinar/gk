@@ -87,9 +87,13 @@ end
 end
 end)
 
-Main1Section:NewSlider("Jump Distance", "bunu fullemeniz lazım", 50, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    DistanceJump = s
-end)
+Main1Section:NewToggle("Jump Distance", "buna basman lazım", function(state)
+        if state then
+           DistanceJump = 50
+        else
+            DistanceJump = 0
+        end
+    end)
 
 local Main2 = Window:NewTab("Auto Walkside")
     local Main2Section = Main2:NewSection("Auto Walkside")
@@ -114,7 +118,10 @@ end
 end
 end)
 
-Main2Section:NewSlider("Walkdistance", "fullemeniz lazım", 300, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
-    DistanceSide = s
-end)
-
+Main2Section:NewToggle("Walk Distance", "buna basman lazım", function(state)
+        if state then
+           DistanceSide = 300
+        else
+            DistanceSide = 0
+        end
+    end)
