@@ -8,8 +8,7 @@ Duration = 5;
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("GK Qura W Pyth", "Sentinel")
 
-    -- MAIN
-    local Main = Window:NewTab("Auto Save")
+local Main = Window:NewTab("Auto Save")
     local MainSection = Main:NewSection("Auto Save")
 
 MainSection:NewToggle("Auto Save", "otomatik kurtarıs (her yerde kurtarır)", function(arg)
